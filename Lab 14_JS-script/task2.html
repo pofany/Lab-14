@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 2</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+
+    const arr =[];
+    for (let i = 0; i <= 15; i++) {
+        arr.push(Math.floor(Math.random() * 101));
+    }
+    document.write("Невідсортований масив: " + arr.join(" ") + "<br>");
+
+    let maxIndex = 0;
+    for (let i = 0; i <= arr.length; i++) {
+        if(arr[i] > arr[maxIndex]) {
+            maxIndex = i;
+        }
+    }
+
+    let temp = arr[1];
+    arr[1] = arr[maxIndex];
+    arr[maxIndex] = temp;
+
+    document.write("Масив після заміни: " + arr.join(" "));
+</script>
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+</body>
+</html>

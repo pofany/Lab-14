@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 3</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    const arr =[];
+    for (let i = 0; i <= 15; i++) {
+        arr.push(Math.floor(Math.random() * 201) - 100);
+    }
+    document.write("Невідсортований масив: " + arr.join(" ") + "<br>");
+
+    // Задаємо значення A та B
+    const A = -10;
+    const B = 20;
+
+    // Знаходимо середнє арифметичне чисел, що не потрапляють у проміжок [A, B]
+    const outsideRange = arr.filter(num => num < A || num > B);
+    const meanOutsideRange = outsideRange.reduce((sum, num) => sum + num, 0) / outsideRange.length;
+
+    document.write("Середнє арифметичне чисел, що не входять у проміжок [A;B]:  " + meanOutsideRange+ "<br>");
+
+    // Рахуємо кількість додатних чисел на позиціях, кратних 3
+    const positiveCountOnMultiplesOf3 = arr.reduce((count, num, index) => {
+        if (index % 3 === 0 && num > 0) {
+            return count + 1;
+        }
+        return count;
+    }, 0);
+
+    document.write("Кількість додатних чисел на позиціях, кратних 3: " + positiveCountOnMultiplesOf3);
+
+
+</script>
+
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+</body>
+</html>

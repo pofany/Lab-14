@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 4</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    // Масиви fruits і citrus
+    let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+    let citrus = ['orange', 'lemon', 'lime'];
+
+    //  Вивести масив fruits
+    document.write("Масив fruits: " + fruits.join(" ") + "<br>");
+
+    //  Вивести масив citrus
+    document.write("Масив citrus: " + citrus.join(" ") + "<br>");
+
+    //  Об'єднаний масив fruits та citrus
+    let combined = fruits.concat(citrus);
+    document.write("Об'єднаний масив fruits та citrus: " + combined.join(" ") + "<br>");
+
+    //  Масив fruits, в якому після mango вставлено: pear, cherry, plum, raspberry, strawberry
+    let mangoIndex = fruits.indexOf('mango');
+    fruits.splice(mangoIndex + 1, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+    document.write("Масив fruits після вставки нових елементів: " + fruits.join(" ") + "<br>");
+
+    //  Масив fruits, в якому видалено останні 3 елементи
+    fruits.splice(fruits.length - 3, 3);
+    document.write("Масив fruits після видалення останніх 3 елементів: " + fruits.join(" ") + "<br>");
+
+    //  Вивести відсортований масив fruits в алфавітному порядку
+    let sortedFruits = [...fruits].sort();
+    document.write("Масив fruits, відсортований в алфавітному порядку: " + sortedFruits.join(" ") + "<br>");
+
+    //  Вивести масив fruits у зворотному алфавітному порядку
+    let reverseSortedFruits = [...fruits].sort().reverse();
+    document.write("Масив fruits, відсортований у зворотному алфавітному порядку: " + reverseSortedFruits.join(" ") + "<br>");
+
+    //  Вивести масив fruits, відсортований за довжиною слів
+    let sortedByLengthFruits = [...fruits].sort((a, b) => a.length - b.length);
+    document.write("Масив fruits, відсортований за довжиною слів: " + sortedByLengthFruits.join(" ") + "<br>");
+    </script>
+<div class="center">
+    <ul class="list">
+        <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 1</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    // Створюємо масив трикутних чисел Treag
+    const Treag = [];
+    for (let n = 1; n <= 10; n++) {
+        Treag.push((n * (n + 1)) / 2);
+    }
+
+    // Виводимо масив Treag у рядок через 2 пробіли
+    document.write("Трикутні числа: " + Treag.join("  ") + "<br>");
+
+    // Створюємо масив квадратів натуральних чисел kvd
+    const kvd = [];
+    for (let n = 1; n <= 10; n++) {
+        kvd.push(n * n);
+    }
+
+    // Виводимо масив kvd у рядок
+    document.write("Квадрати чисел: " + kvd.join(" ") + "<br>");
+
+    // Об'єднуємо масиви Treag і kvd у новий масив rez
+    const rez = Treag.concat(kvd);
+
+    // Виводимо об'єднаний масив rez
+    document.write("Об'єднаний масив: " + rez.join(" ") + "<br>");
+
+    // Відсортовуємо масив rez у зворотному порядку
+    rez.sort((a, b) => b - a);
+
+    // Виводимо відсортований масив rez
+    document.write("Відсортований масив у зворотному порядку: " + rez.join(" "));
+</script>
+<div class="center">
+<ul class="list">
+    <li><button class="home"><a href="../index.html">Повернутися на головну сторінку</a></button></li>
+</ul>
+</div>
+</body>
+</html>
